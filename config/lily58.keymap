@@ -13,13 +13,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
-
             display-name = "Base";
             bindings = <
 &kp ESC         &kp N1  &kp N2  &kp N3        &kp N4          &kp N5                                 &kp N6           &kp N7           &kp N8         &kp N9   &kp N0    &kp MINUS
@@ -30,14 +23,7 @@
             >;
         };
 
-        Layer1 {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
-
+        Lower {
             display-name = "Lower";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &to 3
@@ -49,14 +35,7 @@
         };
 
         Symbols {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
-
-            display-name = "Raise";
+            display-name = "Symbols";
             bindings = <
 &kp TILDE  &kp F1     &kp F2     &kp F3    &kp F4     &kp F5                            &kp F6            &kp F7             &kp F8          &kp F9           &kp F10   &trans
 &trans     &trans     &trans     &trans    &trans     &trans                            &trans            &trans             &trans          &trans           &trans    &trans
@@ -67,8 +46,14 @@
         };
 
         Gaming {
-            status = "reserved";
-            sensor-bindings = <&inc_dec_kp 0 0>;
+            display-name = "Gaming";
+            bindings = <
+&trans     &trans     &trans     &trans    &trans     &trans                            &trans            &trans             &trans          &trans           &trans    &trans
+&trans     &trans     &trans     &trans    &trans     &trans                            &trans            &trans             &trans          &trans           &trans    &trans
+&trans     &trans     &trans     &trans    &trans     &trans                            &trans            &trans             &trans          &trans           &trans    &trans
+&trans     &trans     &tran      &trans    &trans     &trans          &trans    &trans  &trans            &trans             &trans          &trans           &trans    &trans
+                                 &trans    &trans     &trans          &trans    &trans  &trans            &trans             &trans
+            >;
         };
 
         extra_2 { status = "reserved"; };
