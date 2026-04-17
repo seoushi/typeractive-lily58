@@ -17,7 +17,7 @@
             bindings = <
 &kp ESC         &kp N1  &kp N2  &kp N3        &kp N4          &kp N5                                 &kp N6           &kp N7           &kp N8         &kp N9   &kp N0    &kp MINUS
 &kp TAB         &kp Q   &kp W   &kp E         &kp R           &kp T                                  &kp Y            &kp U            &kp I          &kp O    &kp P     &kp BACKSLASH
-&kp LEFT_SHIFT  &kp A   &kp S   &mt D LCTRL   &mt F LEFT_GUI  &mt G LEFT_ALT                         &mt H RIGHT_ALT  &mt J RIGHT_GUI  &mt K RCTRL    &kp L    &kp SEMI  &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp A   &kp S   &mt LCTRL D   &mt LEFT_GUI F  &mt LEFT_ALT G                         &mt RIGHT_ALT H  &mt RIGHT_GUI J  &mt RCTRL K    &kp L    &kp SEMI  &kp RIGHT_SHIFT
 &kp LCTRL       &kp Z   &kp X   &kp C         &kp V           &kp B           &mo 2         &mo 2    &kp N            &kp M            &kp COMMA      &kp DOT  &kp FSLH  &mo 1
                                 &kp LEFT_ALT  &kp LGUI        &kp BACKSPACE   &kp DELETE    &kp RET  &kp SPACE        &kp RIGHT_GUI    &kp RIGHT_ALT
             >;
@@ -51,7 +51,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &kp D   &kp F   &kp G                     &kp H   &kp J   &kp K   &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &mo 1
+&trans  &trans  &trans  &trans  &trans  &trans  &mo 2     &mo 2   &trans  &trans  &trans  &trans  &trans  &mo 1
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
